@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mamanjeanny | Menu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="popup.css" />
+
+</head>
+<body>
+        <nav>
+            <div class="nav__logo"><a href="#">Maman Jeanny</a></div>
+            <ul class="nav__links" id="nav-links">
+            <li class="link"><a href="index.html">Accueil</a></li>
+            <li class="link"><a href="about.html">A propos</a></li>
+            <li class="link"><a href="order.html">Commander</a></li>
+            <li class="link"><a href="#menus">Menus</a></li>
+            <li class="link" id="login"><a href="login.html">Connexion</a></li>
+            <li class="link" id="login"><a href="registration.html">Inscription</a></li>
+            </ul>
+            <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-3-line"></i></span>
+            </div>
+        </nav>
+
+        <!-- Popup Formulaire de commande -->
+        <div class="popup" id="popupForm">
+            <div class="popup-content">
+                <span id="close" class="close"><i class="ri-close-fill"></i></span>
+                <h2><i class="ri-shopping-cart-line"></i>
+                    Commande
+                </h2>
+                <form>
+                    <div class="input__family">
+                        <label for="name">Nom:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="input__family">
+                        <label for="tel">Tel:</label>
+                        <input type="text" id="tel" name="email">
+                    </div>
+                    <div class="input__family">
+                        <label for="address">Adresse de Livraison:</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="input__family">
+                        <label for="quantity">Quantité</label>
+                        <input type="number" id="quantity" name="quantity" min="1">
+                    </div>
+                    <div class="input__family">
+                        <label for="quantity">Montant</label>
+                        <input type="number" id="total" name="price" value="0" readonly>
+                    </div>
+                    <div class="input__family">
+                        <label for="payment-method">Mode de Paiement:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="livraison">À la livraison</option>
+                            <option value="wave">Wave</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn" id="validate"><i class="ri-shopping-cart-line"></i> Commander</button>
+                </form>
+            </div>
+        </div>
+
+        <button class="modal-btn"> Open </button>
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

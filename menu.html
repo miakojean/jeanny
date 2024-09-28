@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mamanjeanny | Menu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="menu.css" />
+
+</head>
+<body>
+    <nav>
+        <div class="nav__logo"><a href="#">Maman Jeanny</a></div>
+        <ul class="nav__links" id="nav-links">
+          <li class="link"><a href="index.html">Accueil</a></li>
+          <li class="link"><a href="about.html">A propos</a></li>
+          <li class="link"><a href="order.html">Commander</a></li>
+          <li class="link"><a href="#menus">Menus</a></li>
+          <li class="link" id="login"><a href="login.html">Connexion</a></li>
+          <li class="link" id="login"><a href="registration.html">Inscription</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-3-line"></i></span>
+        </div>
+    </nav>
+
+    <!-- Popup Formulaire de commande -->
+    <div class="popup" id="popupForm">
+      <div class="popup-content">
+          <span class="close"><i class="ri-close-fill"></i></span>
+          <h2><i class="ri-shopping-cart-line"></i>
+              Commande
+          </h2>
+          <form>
+            <div class="input__family">
+              <label for="name">Nom:</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="input__family">
+              <label for="tel">Tel:</label>
+              <input type="text" id="tel" name="phone_number">
+            </div>
+          <div class="input__family">
+            <label for="commune">Commune</label>
+            <select id="commune" name="commune" >
+                <option value="adjamé">adjamé</option>
+                <option value="Abobo">Abobo</option>
+                <option value="Cocody">Cocody</option>
+                <option value="Koumassi">Koumassi</option>
+                <option value="Treichville">Treichville</option>
+                <option value="Marcory">Marcory</option>
+            </select>
+          </div>
+          <div class="input__family">
+              <label for="address">Adresse de Livraison:</label>
+              <input type="text" id="address" name="address">
+          </div>
+          <div class="input__family">
+              <label for="quantity">Quantité</label>
+              <input type="number" id="quantity" name="quantity" min="1">
+          </div>
+          <div class="input__family">
+              <label for="quantity">Montant</label>
+              <input type="number" id="total" name="price" value="0" readonly>
+          </div>
+          <div class="input__family">
+              <label for="payment-method">Mode de Paiement:</label>
+              <select id="payment-method" name="payment-method" required>
+                  <option value="livraison">À la livraison</option>
+                  <option value="wave">Wave</option>
+              </select>
+          </div>
+              <button type="submit" class="btn" id="validate"><i class="ri-shopping-cart-line"></i> Commander</button>
+          </form>
+      </div>
+    </div>
+
+    <section class="section__container about__container" id="menus">
+        <div class="about__header">
+          <div class="about__image">
+            <img src="assets/pic6.jpg" alt="about" />
+          </div>
+          <div class="about__content">
+                <p class="section__subheader">Menu du jour</p>
+                <h2 class="section__header">Notre menu du jour est</h2>
+                    <div class="about__card">
+                        <span><i class="ri-restaurant-line"></i></span>
+                        <div>
+                        <h4>Riz sauce feuille</h4>
+                        <p>
+                            Découvrez notre délicieux riz blanc accompagné de la savoureuse 
+                            sauce feuille, un plat traditionnel ivoirien. Préparée avec des 
+                            feuilles vertes locales, cette sauce riche en saveurs se marie 
+                            parfaitement avec 
+                            le riz, offrant un repas authentique et réconfortant.
+                        </p>
+                    </div>
+            </div>
+            <button class="btn" id="order__1" >Commander</button>
+          </div>
+        </div>
+      </section>
+
+    <section class="section__container news__container" id="menus">
+      <p class="section__subheader">Menus</p>
+      <h2 class="section__header">Découvrez nos différents menus</h2>
+      <div class="news__grid">
+        <div class="news__card">
+          <img src="assets/pic9.jpeg" alt="tcheos" />
+            <div>
+                <h4>Différentes variété de tcheps</h4>
+                <p>
+                Nous proposons différentes variétés de tcheps, 
+                du classique poisson au savoureux poulet, 
+                chaque version est préparée avec soin pour offrir 
+                une explosion de saveurs ivoiriennes.
+                </p>
+                <a href="#" class="btn__link">
+                Consulter <span><i class="ri-arrow-right-line"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="news__card">
+          <img src="assets/pic8.webp" alt="Attiéké avec poisson" />
+          <div>
+            <h4>Attiéké avec poisson/poulet</h4>
+            <p>
+              Découvrez nos délicieux plats d'attiéké, accompagnés soit 
+              de poisson grillé, soit de poulet tendre. Chaque option est 
+              savoureuse et reflète l'authenticité de la cuisine ivoirienne.
+            </p>
+            <a href="#" class="btn__link">
+              Consulter <span><i class="ri-arrow-right-line"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="news__card">
+          <img src="assets/pic7.webp" alt="Riz avec sauce" />
+          <div>
+            <h4>Riz blanc avec sauce</h4>
+            <p>
+              Savourez notre riz blanc accompagné de diverses sauces ivoiriennes, 
+              riches en saveurs. Que ce soit sauce graine, arachide ou feuille, 
+              chaque bouchée est un délice.
+            </p>
+            <a href="#" class="btn__link">
+              Consulter <span><i class="ri-arrow-right-line"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section__container contact__container">
+        <h2 class="section__header">
+          Entrer dans un monde de saveurs exceptionnelles
+        </h2>
+        <div class="contact__btn">
+          <button class="btn" id="order_2">Commander</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section__container footer__container">
+      <div class="footer__col">
+        <h5><a href="#">Maman Jeanny</a></h5>
+      </div>
+      <div class="footer__col">
+        <h4>Nos contact</h4>
+        <p>402, Adjame-paillet, Abidjan</p>
+        <p>+225 0757240274</p>
+        <p>mamanjeanny@gmail.com</p>
+      </div>
+      <div class="footer__col">
+        <h4>A propos de nous</h4>
+        <p>
+          Nous mettons un point d'honneur à offrir à nos 
+          clients une cuisine qui reflète la richesse culturelle de notre 
+          pays, tout en leur apportant confort et praticité grâce à un service 
+          de livraison rapide et fiable.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Souscrire</h4>
+        <form action="/">
+          <input type="text" placeholder="Your Email" />
+          <button><i class="ri-send-plane-2-fill"></i></button>
+        </form>
+        <div class="footer__socials">
+          <h4>Nous suivre</h4>
+          <div>
+            <a href="#"><i class="ri-facebook-box-fill"></i></a>
+            <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__bar">
+      Copyright © 2023 Web Design Mastery. All rights reserved.
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

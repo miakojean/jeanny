@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription | mamanjeanny</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="nav__logo"><a href="#">Maman Jeanny</a></div>
+        <ul class="nav__links" id="nav-links">
+          <li class="link"><a href="index.html">Accueil</a></li>
+          <li class="link"><a href="about.html">A propos</a></li>
+          <li class="link"><a href="order.html">Commander</a></li>
+          <li class="link"><a href="menu.html">Menus</a></li>
+          <li class="link" id="login"><a href="login.html">Connexion</a></li>
+          <li class="link" id="login"><a href="registration.html">Inscription</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-3-line"></i></span>
+        </div>
+    </nav>
+
+    <section class="section__container about__container" id="about">
+        <div class="about__header">
+          <div class="about__image">
+            <img src="assets/pic1.jpg" alt="about" />
+          </div>
+          <div class="about__content">
+            <p class="section__subheader">Se connecter</p>
+            <h2 class="section__header">Connexion</h2>
+            <div class="order__form">
+
+              <div class="message">
+                <p>{{ message }}</p>
+              </div>
+                <form action="" method="post">
+                  <div class="input_group">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="username" id="username" name="username" class="input_field">
+                  </div>
+                  <div class="input_group">
+                    <label for="password1">Mot de passe</label>
+                    <input type="password" id="password1" name="password1" class="input_field">
+                  </div>
+                    <div class="input_group">
+                    <button class="btn" type="submit">Inscription</button>
+                    </div>
+                </form>
+                <div class="no__account">
+                    <p><a href="#">mot de passe oublié?</a></p>
+                    /
+                    <p><a href="registration.html">Ouvrir un compte</a></p>
+                </div>
+            </div>            
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="section__container footer__container">
+        <div class="footer__col">
+          <h5><a href="#">Maman Jeanny</a></h5>
+        </div>
+        <div class="footer__col">
+          <h4>Nos contact</h4>
+          <p>402, Adjame-paillet, Abidjan</p>
+          <p>+225 0586070612</p>
+          <p>mamanjeanny@gmail.com</p>
+        </div>
+        <div class="footer__col">
+          <h4>A propos de nous</h4>
+          <p>
+            Nous mettons un point d'honneur à offrir à nos 
+            clients une cuisine qui reflète la richesse culturelle de notre 
+            pays, tout en leur apportant confort et praticité grâce à un service 
+            de livraison rapide et fiable.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Souscrire</h4>
+          <form action="/">
+            <input type="text" placeholder="Your Email" />
+            <button><i class="ri-send-plane-2-fill"></i></button>
+          </form>
+          <div class="footer__socials">
+            <h4>Nous suivre</h4>
+            <div>
+              <a href="#"><i class="ri-facebook-box-fill"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </div>
+          </div>
+        </div>
+    </footer>
+        
+    <div class="footer__bar">
+        Copyright © 2023 Web Design Mastery. All rights reserved.
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="login.js"></script>
+</body>
+</html>
