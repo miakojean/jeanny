@@ -32,27 +32,45 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
-// Sélectionne la popup et le bouton
+// Sélectionner les popups et les boutons
 var popup = document.getElementById('popupForm');
+var popupReser = document.getElementById('popupFormreservation');
+var ReserBtn = document.getElementById('order__2');
 var orderBtn = document.getElementById('order__1');
-var closeBtn = document.getElementsByClassName('close')[0];
 
-// Afficher la popup quand le bouton Commander est cliqué
+// Boutons de fermeture spécifiques pour chaque popup
+var closeOrderBtn = document.getElementById('closeOrder'); // ID pour fermer la commande
+var closeReservationBtn = document.getElementById('closeReservation'); // ID pour fermer la réservation
+
+// Afficher la réservation pour le plat
+ReserBtn.addEventListener('click', function() {
+  popupReser.style.display = "block";
+});
+
+// Fermer la popup de réservation quand le bouton X est cliqué
+closeReservationBtn.addEventListener('click', function() {
+  popupReser.style.display = 'none';
+});
+
+// Afficher la popup de commande quand le bouton Commander est cliqué
 orderBtn.addEventListener('click', function() {
   popup.style.display = "block";
 });
 
-// Fermer la popup quand le bouton X est cliqué
-closeBtn.addEventListener('click', function() {
+// Fermer la popup de commande quand le bouton X est cliqué
+closeOrderBtn.addEventListener('click', function() {
   popup.style.display = 'none';
 });
 
 // Fermer la popup si l'utilisateur clique en dehors du contenu
 window.addEventListener('click', function(event) {
-    if (event.target == popup) {
-        popup.style.display = "none";
-    }
+  if (event.target == popup) {
+    popup.style.display = "none";
+  } else if (event.target == popupReser) {
+    popupReser.style.display = "none";
+  }
 });
+
 
 // Prix unitaire fixe
 const unitPrice = 2000; // Par exemple, 500 unités de monnaie

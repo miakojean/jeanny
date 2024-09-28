@@ -11,7 +11,7 @@
   --white-color: hsl(0, 0%, 100%);
   --text-color: hsl(225, 8%, 65%);
   --body-color: hsl(225, 100%, 99%);
-
+ 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat Alternates", sans-serif;
@@ -71,16 +71,12 @@ a {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
-}
 
 /* Remove the property of 100vh, when inserting its content */
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 2rem;
 }
 
 .section__header {
@@ -437,6 +433,10 @@ span{
   color: var(--text-light);
 }
 
+#deliadress{
+  padding-bottom: 7rem;
+}
+
 /* Styles pour la popup */
 
 /**/
@@ -632,6 +632,24 @@ input:focus{
    margin-top: 20px; 
 }
 
+
+/*=============== About the historic of oders ============*/
+
+#history{
+  overflow-y: scroll; /* Toujours activer le défilement vertical */
+  max-height: 60vh; /* Limite la hauteur du formulaire */
+}
+
+/* Cache la barre de défilement sur les navigateurs Webkit (Chrome, Safari) */
+#historiy {
+  display: none;
+}
+
+/* Cache la barre de défilement sur Firefox */
+#history {
+  scrollbar-width: none; /* Firefox */
+}
+
 /*=============== ABOUT CONTENT =============*/
 /* For medium devices */
 @media screen and (min-width: 450px) {
@@ -644,5 +662,106 @@ input:focus{
 @media screen and (min-width: 1150px) {
   .container {
     margin-inline: auto;
+  }
+}
+
+@media (width > 768px) {
+
+  /* Styles pour la popup */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding: 0.1rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .popup-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+  }
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+  .about__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .portfolio__header {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .client__header {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .news__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .news__card {
+    grid-auto-rows: auto;
+  }
+
+  .news__card:first-child {
+    grid-area: 1/1/3/2;
+  }
+
+  .news__card:not(:first-child) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .contact__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (width > 1024px) {
+  .header__image {
+    gap: 2rem;
+  }
+
+  .portfolio__grid {
+    gap: 2rem;
+  }
+
+  .news__grid {
+    gap: 4rem;
+  }
+
+  .news__card {
+    gap: 2rem;
   }
 }
