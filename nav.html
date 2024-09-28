@@ -34,7 +34,7 @@
                   <i class="ri-add-line nav__expand-icon" id="nav-expand-icon"></i>
                </button>
 
-               <ul class="nav__expand-list" id="nav-expand-list">
+               <ul class="nav__expand-list " id="nav-expand-list">
                   <li>
                      <a href="#" class="nav__expand-link">
                         <i class="ri-shopping-cart-line" id="order__1"></i>
@@ -98,11 +98,11 @@
             </div>
             <div class="input__family">
                 <label for="quantity">Quantité</label>
-                <input type="number" id="quantity" name="quantity" min="1">
+                <input type="number" id="quantity" name="quantity" min="1" class="quantity">
             </div>
             <div class="input__family">
                 <label for="quantity">Montant</label>
-                <input type="number" id="total" name="price" value="0" readonly>
+                <input type="number" id="total" name="price" value="0" readonly class="price">
             </div>
             <div class="input__family">
                 <label for="payment-method">Mode de Paiement:</label>
@@ -117,11 +117,11 @@
       </div>
       <!--==================== POPUP POUR COMMANDE ====================-->
 
-      <!-- Popup Formulaire de commande -->
+      <!-- Popup Formulaire de Reservation -->
       <div class="popup" id="popupFormreservation">
         <div class="popup-content">
             <span class="close" id="closeReservation"><i class="ri-close-fill"></i></span>
-            <h2><i class="ri-shopping-cart-line"></i>
+            <h2><i class="ri-calendar-check-line"></i>
                 Reservation
             </h2>
             <form>
@@ -149,12 +149,16 @@
                 <input type="text" id="address" name="address">
             </div>
             <div class="input__family">
+              <label for="Date">Date</label>
+              <input type="date" id="Date" name="date">
+            </div>
+            <div class="input__family">
                 <label for="quantity">Quantité</label>
-                <input type="number" id="quantity" name="quantity" min="1">
+                <input type="number" id="quantity" name="quantity" min="1" class="quantity">
             </div>
             <div class="input__family">
                 <label for="quantity">Montant</label>
-                <input type="number" id="total" name="price" value="0" readonly>
+                <input type="number" id="total" name="price" value="0" readonly class="price">
             </div>
             <div class="input__family">
                 <label for="payment-method">Mode de Paiement:</label>
@@ -163,7 +167,7 @@
                     <option value="wave">Wave</option>
                 </select>
             </div>
-                <button type="submit" class="btn" id="validate"><i class="ri-shopping-cart-line"></i> Commander</button>
+                <button type="submit" class="btn" id="validate"><i class="ri-shopping-cart-line"></i> Reserver </button>
             </form>
         </div>
       </div>
@@ -214,6 +218,9 @@
                           <label for="commune">Commune</label>
                         </div>
                         <div class="input__family">
+                          <label for="commune">Adresse</label>
+                        </div>
+                        <div class="input__family">
                           <label for="quantity">Quantité</label>
                         </div>
                         <div class="input__family">
@@ -221,6 +228,12 @@
                         </div>
                         <div class="input__family">
                           <label for="payment-method">Mode de Paiement:</label>
+                        </div>
+                        <div class="input__family">
+                          <label for="payment-method">Reçu de commande</label>
+                        </div>
+                        <div class="input__family">
+                          <label for="payment-method">Statut</label>
                         </div>
                       </div>            
                 </div>      
@@ -267,22 +280,22 @@
               <div class="order__form" id = "history">
                   <div class="input__family">
                     <div class="input_group">
-                          <label for="Nom">Nom</label>
+                          <label for="Nom">Adresse de livraison</label>
                           <span>MIAKO</span>
                     </div>
                     <div class="input_group">
-                          <label for="Adresse">Prenoms</i></label>
-                          <span>Jean Yves Arnold</span>
+                          <label for="Adresse">Numéro de tel</label>
+                          <span>+225 0103926375</span>
                     </div>
                   </div>
                   <div class="input__family">
                     <div class="input_group">
-                          <label for="username">username</label>
-                          <span>Arnold</span>
+                          <label for="username">Mode de paiement</label>
+                          <span>Wave</span>
                       </div>
                     <div class="input_group">
-                          <label for="Email">Email</label>
-                          <span>miako@gmail.com</span>
+                          <label for="Email">Whatsapp</label>
+                          <span>+225 0586070612</span>
                       </div>
                   </div>
               </div>            

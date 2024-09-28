@@ -71,22 +71,26 @@ window.addEventListener('click', function(event) {
   }
 });
 
-
-// Prix unitaire fixe
-const unitPrice = 2000; // Par exemple, 500 unités de monnaie
-
-// Sélectionner les éléments
-const quantityInput = document.getElementById('quantity');
-const totalInput = document.getElementById('total');
+// Sélectionner les éléments par classe
+const quantityInputs = document.getElementsByClassName('quantity');
+const totalInputs = document.getElementsByClassName('price');
+const unitPrice = 2000; // Par exemple, le prix unitaire peut être défini ici
 
 // Fonction pour calculer et afficher le montant total
-function calculateTotal() {
-    const quantity = parseInt(quantityInput.value); // Récupérer la quantité entrée
+function calculateTotal(index) {
+    const quantity = parseInt(quantityInputs[index].value); // Récupérer la quantité entrée
     const total = quantity * unitPrice; // Calculer le montant total
-    totalInput.value = total; // Afficher le montant dans l'input total
+    totalInputs[index].value = total; // Afficher le montant dans l'input total
 }
+
 // Ajouter un événement pour recalculer quand la quantité change
-quantityInput.addEventListener('input', calculateTotal);
+for (let i = 0; i < quantityInputs.length; i++) {
+    quantityInputs[i].addEventListener('input', function() {
+        calculateTotal(i);  // Passer l'index de l'input pour les associer
+    });
+}
 
 // Calculer le montant initial au chargement de la page
-calculateTotal();
+for (let i = 0; i < quantityInputs.length; i++) {
+    calculateTotal(i);  // Calculer pour chaque entrée au chargement
+}
