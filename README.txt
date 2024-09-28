@@ -1,0 +1,1 @@
+This is the first file about my git repository on the web restaurant of my mom
