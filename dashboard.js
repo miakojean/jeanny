@@ -94,3 +94,34 @@ for (let i = 0; i < quantityInputs.length; i++) {
 for (let i = 0; i < quantityInputs.length; i++) {
     calculateTotal(i);  // Calculer pour chaque entrée au chargement
 }
+
+// Sélectionner les éléments
+const totalInput = document.getElementById('total');
+const serialNumberDiv = document.getElementById('serialNumberDiv');
+const serialNumberInput = document.getElementById('serialNumber');
+
+// Fonction pour générer un numéro de série aléatoire
+function generateSerialNumber() {
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const numbers = '0123456789';
+    let serial = '';
+    for (let i = 0; i < 2; i++) {
+        serial += letters.charAt(Math.floor(Math.random() * letters.length));
+    }
+    for (let i = 0; i < 4; i++) {
+        serial += numbers.charAt(Math.floor(Math.random() * numbers.length));
+    }
+    return serial;
+}
+
+// Afficher la div et générer le numéro de série lorsque le montant est entré
+totalInput.addEventListener('input', function() {
+    if (totalInput.value > 0) {
+        const serialNumber = generateSerialNumber(); // Générer un numéro de série
+        serialNumberInput.value = serialNumber; // Mettre à jour l'input avec le numéro de série
+        serialNumberDiv.style.display = 'block'; // Afficher la div
+    } else {
+        serialNumberDiv.style.display = 'none'; // Cacher la div si aucun montant n'est entré
+    }
+});
+

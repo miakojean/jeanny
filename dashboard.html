@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
       <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="nav.css">
+      <link rel="stylesheet" href="dashboard.css">
 
       <title>Responsive navbar with expanded menu - Bedimcode</title>
    </head>
@@ -111,7 +111,13 @@
                     <option value="wave">Wave</option>
                 </select>
             </div>
-                <button type="submit" class="btn" id="validate"><i class="ri-shopping-cart-line"></i> Commander</button>
+            <div id="serialNumberDiv" class="input__family">
+              <label for="invoice_number">Facture N°</label>
+              <input type="text" id="serialNumber" name="serial_number_order" value="" readonly >
+            </div>
+            <div class="input__family">
+              <button type="submit" class="btn" id="validate"><i class="ri-shopping-cart-line"></i> Commander</button>
+            </div>
             </form>
         </div>
       </div>
@@ -124,7 +130,7 @@
             <h2><i class="ri-calendar-check-line"></i>
                 Reservation
             </h2>
-            <form>
+            <form method="post">
               <div class="input__family">
                 <label for="name">Nom:</label>
                 <input type="text" id="name" name="name">
@@ -304,6 +310,6 @@
   </section>
       
     <!--=============== MAIN JS ===============-->
-    <script src="nav.js"></script>
+    <script src="dashboard.js"></script>
    </body>
 </html>
