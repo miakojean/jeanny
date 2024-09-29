@@ -592,7 +592,7 @@ span{
 }
 
 #serialNumberDiv {
-  /*display: none; /* Cachée par défaut */
+  display: none; /* Cachée par défaut */
   margin-top: 15px;
   padding: 10px;
   background-color: #f9f9f9;

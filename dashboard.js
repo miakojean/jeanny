@@ -122,6 +122,8 @@ totalInput.addEventListener('input', function() {
         serialNumberDiv.style.display = 'block'; // Afficher la div
     } else {
         serialNumberDiv.style.display = 'none'; // Cacher la div si aucun montant n'est entré
+        serialNumberInput.value = ''; // Réinitialiser la valeur si la div est cachée
     }
 });
+
 
