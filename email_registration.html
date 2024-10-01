@@ -1,132 +1,299 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MamanJeanny | Confirmation d'inscription</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="email_registration.css">
-</head>
-<body>
-    <header class="section__container header__container" id="home">
-        <div class="header__content">
-          <h1>Bienvenu(e) chez-nous</h1>
-          <div class="header__content__details">
-            <p>
-              Chez Maman Jeanny, nous avons à cœur de partager 
-              l'authenticité et les saveurs uniques de la cuisine ivoirienne à 
-              travers une expérience culinaire en ligne simple et conviviale. 
-            </p>
-            <button class="btn" id="about__us">Decouvrir</button>
-          </div>
-        </div>
-        <div class="header__image">
-          <img src="assets/pic2.jpg" alt="header" />
-          <img src="assets/pic3.jpg" alt="header" />
-        </div>
-      </header>
-  
-      <section class="section__container about__container" id="about">
-        <div class="about__header">
-          <div class="about__content">
-            <p class="section__subheader">Inscription Réussie</p>
-            <h2 class="section__header">Akwaba</h2>
-            <p class="paragraph">
-              Bienvenue <h4>{{ user.first_name }} {{ user.last_name }} !</h4> 
-              Merci de vous être inscrit sur notre site. Nous sommes
-              ravis de vous compter parmi nos utilisateurs.
-              et respectueuse des plus hauts standards d'hygiène.
-            </p>
-            <p class="paragraph">
-              Vous pouvez dès à présent vous connecter en utilisant 
-              votre adresse e-mail : <h4>{{ user.email }}</h4>
-            </p>
-            <p class="paragraph">
-                Passer votre première commande en cliquant sur ce boutton
-            </p>
-            <button class="btn" id="order_1"><a href="">Commander</a></button>
-          </div>
-        </div>
-        <div class="about__grid">
-          <div class="about__card">
-            <span><i class="ri-restaurant-line"></i></span>
-            <div>
-              <h4>Menus Variés</h4>
-              <p>
-                  Chaque jour, nous proposons un menu différent
-                  pour offrir une nouvelle expérience culinaire 
-                  à chaque commande.
-              </p>
-            </div>
-          </div>
-          <div class="about__card">
-            <span><i class="ri-truck-line"></i></span>
-            <div>
-              <h4>livraison rapide et pratique</h4>
-              <p>
-                  Commandez en quelques clics et profitez 
-                  d'une livraison rapide directement chez vous 
-                  ou au bureau.
-              </p>
-            </div>
-          </div>
-          <div class="about__card">
-            <span><i class="ri-shield-check-line"></i></span>
-            <div>
-              <h4>Hygiène et Qualité Garanties</h4>
-              <p>
-                  Nous respectons les normes d'hygiène les plus 
-                  strictes pour assurer la sécurité de vos repas. 
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
-      <footer class="section__container footer__container">
-        <div class="footer__col">
-          <h5><a href="#">Maman Jeanny</a></h5>
-        </div>
-        <div class="footer__col">
-          <h4>Nos contact</h4>
-          <p>402, Adjame-paillet, Abidjan</p>
-          <p>+225 0757240274</p>
-          <p>mamanjeanny@gmail.com</p>
-        </div>
-        <div class="footer__col">
-          <h4>A propos de nous</h4>
-          <p>
-            Nous mettons un point d'honneur à offrir à nos 
-            clients une cuisine qui reflète la richesse culturelle de notre 
-            pays, tout en leur apportant confort et praticité grâce à un service 
-            de livraison rapide et fiable.
-          </p>
-        </div>
-        <div class="footer__col">
-          <h4>Souscrire</h4>
-          <form action="/">
-            <input type="text" placeholder="Your Email" />
-            <button><i class="ri-send-plane-2-fill"></i></button>
-          </form>
-          <div class="footer__socials">
-            <h4>Nous suivre</h4>
-            <div>
-              <a href="#"><i class="ri-facebook-box-fill"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <div class="footer__bar">
-        Copyright © 2023 Web Design Mastery. All rights reserved.
-      </div>
+<head>
+  <title>
+  </title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+  </style>
+  <!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+  <!--[if lte mso 11]>
+        <style type="text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap);
+  </style>
+  <!--<![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
+    }
+  </style>
+  <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width:480px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
+
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body style="word-spacing:normal;">
+  <div style="">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:'playfair',serif;font-size:30px;font-weight:500;line-height:1;text-align:left;color:#000000;">MamaJeanny</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 0;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:600px;" role="presentation" width="600px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- Image après le header -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:550px;">
+                                <img alt="Image de bienvenue" height="auto" src="assets/pic1.jpg" width="550" />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:'poppins',sans-serif;font-size:20px;font-weight:500;line-height:1.5;text-align:left;color:#000000;">Inscription réussie. Bienvenue chez nous cher utilisateur</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 0;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:600px;" role="presentation" width="600px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:'poppins',sans-serif;font-size:16px;font-weight:500;line-height:1.5;text-align:left;color:#555555;">Bienvenue dans notre restaurant ! Nous sommes ravis de vous accueillir dans un espace où la passion pour la cuisine rencontre l'amour de l'hospitalité. Notre équipe dévouée s'efforce de vous offrir une expérience culinaire inoubliable, avec des plats soigneusement préparés à partir d'ingrédients frais et locaux.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:'poppins',sans-serif;font-size:16px;font-weight:500;line-height:1.5;text-align:left;color:#555555;">Passer dès à présent votre première commande.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" vertical-align="middle" style="font-size:0px;padding:15px 25px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                          <tr>
+                            <td align="center" bgcolor=" #face59;
+" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background: #face59;
+;" valign="middle">
+                              <a href="https://www.example.com" style="display:inline-block;background: #face59;
+;color:#ffffff;font-family:'Poppins', sans-serif;font-size:16px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;" target="_blank"> Commander </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:'poppins',sans-serif;font-size:20px;font-weight:500;line-height:1.5;text-align:left;color:#000000;">Nos contacts</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 0;word-break:break-word;">
+                        <p style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px #000000;font-size:1px;margin:0px auto;width:600px;" role="presentation" width="600px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:'poppins',sans-serif;font-size:16px;font-weight:500;line-height:1.5;text-align:left;color:#555555;">Email: mamajanny@gmail.com</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:'poppins',sans-serif;font-size:16px;font-weight:500;line-height:1.5;text-align:left;color:#555555;">N° de téléphone: 0586070612</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+  </div>
 </body>
+
 </html>
